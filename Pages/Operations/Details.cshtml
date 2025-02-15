@@ -1,0 +1,23 @@
+@page "{id:int}"
+@model Operations.DetailsModel
+@{
+    ViewData["Title"] = "Operation Details";
+}
+
+<div class="fs-3"> 
+    <p> 
+        <span class="fw-bold">
+            Codename( 
+        </span> 
+        @Model.Operation.Codename 
+        <span class="fw-bold"> ) </span>
+    </p>
+    <p> 
+        <span class="fw-bold"> 
+            Status( 
+        </span> 
+        @Model.Operation.Status 
+        <span class="fw-bold"> ) </span>
+    </p>
+</div>
+

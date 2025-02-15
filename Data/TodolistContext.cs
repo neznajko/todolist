@@ -6,8 +6,12 @@ namespace todolist.Data;
 ////////////////////////////////////////////////////////////////////////////////////////
 public class TodolistContext: DbContext {
     public DbSet <Operation> Operations { get; set; }
+    /*
+    public DbSet <Mission> Missions { get; set; }
+    public DbSet <Operation> Operations { get; set; }
+    */
     protected override void OnConfiguring( DbContextOptionsBuilder optionsBuilder ){
-        optionsBuilder.UseSqlite( @"Data source=todolist.sql" );
+        optionsBuilder.UseSqlite( @"Data source=todolist.db" );
     }
 }
 ////////////////////////////////////////////////////////////////////////////////////////
