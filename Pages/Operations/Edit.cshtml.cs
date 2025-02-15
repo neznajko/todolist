@@ -1,25 +1,27 @@
 ////////////////////////////////////////////////////////////////
-using todolist.Models;
-using todolist.Data;
+using todolist.Models; // Operation, OperationStatus
+using todolist.Data; // TodolistContext
 ////////////////////////////////////////////////////////////////
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc; // IActionResult
+using Microsoft.AspNetCore.Mvc.RazorPages; // PageModel
+using Microsoft.EntityFrameworkCore; // EntityState
 ////////////////////////////////////////////////////////////////
 namespace todolist.Pages.Operations;
 ////////////////////////////////////////////////////////////////
-public class CreateModel: PageModel {
+public class EditModel: PageModel {
     private readonly TodolistContext context;
     public Array Statuses { get; }
-    public CreateModel( TodolistContext context ){
+    public EditModel( TodolistContext context ){
         this.context = context;
         Statuses = Enum.GetValues( typeof( OperationStatus ));
     }
     // binds the incoming request data to the Operation property
     [BindProperty]
     public Operation Operation { get; set; }
-    // OnGet, return the form to be filled
-    public IActionResult OnGet() {
-        return Page();
+    // OnGet, return the form to be edited
+    public async Task <IActionResult> OnGetAsync( int id ){
+        Operation = await context.Operations.FindAsync( id );
+        return Operation == null ? NotFound() : Page();
     }
     // OnPost, Operation is filled with the incoming request data
     // before entering this funcrion
@@ -28,9 +30,9 @@ public class CreateModel: PageModel {
         if( !ModelState.IsValid ){
             return Page();
         }
-        context.Operations.Add( Operation );
+        context.Attach( Operation ).State = EntityState.Modified;
         await context.SaveChangesAsync();
-        // here id should match the @page directive in the Create page
+        // here id should match the @page directive in the Edit page
         return RedirectToPage( "./Details", new { id = Operation.Id });
     }
 }

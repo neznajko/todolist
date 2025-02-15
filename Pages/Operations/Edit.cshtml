@@ -1,11 +1,12 @@
-@page
-@model Operations.CreateModel
+@page "{id:int}"
+@model Operations.EditModel
 @{
-    ViewData[ "Title" ] = "Create Operation";
+    ViewData[ "Title" ] = "Edit Operation";
 }
 
-<h1 class="display-4"> Create Operation </h1>
+<h1 class="display-4"> Edit Operation </h1>
 <form method="POST">
+  <input type="hidden" asp-for="Operation.Id" />
   <div class="form-group">
     <label asp-for="Operation.Codename" class="control-label"></label>
     <input type="text" list="cars" asp-for="Operation.Codename" class="form-control" />
@@ -24,7 +25,7 @@
       }
     </select>
     <div class="form-group">
-      <input type="submit" value="Create" class="btn btn-primary" />
+      <input type="submit" value="Edit" class="btn btn-primary" />
     </div>
   </div>
 </form>
