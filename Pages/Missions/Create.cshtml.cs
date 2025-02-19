@@ -2,34 +2,33 @@
 using todolist.Models;
 using todolist.Data;
 ////////////////////////////////////////////////////////////////
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc;
 ////////////////////////////////////////////////////////////////
-namespace todolist.Pages.Operations;
+namespace todolist.Pages.Missions;
 ////////////////////////////////////////////////////////////////
 public class CreateModel: PageModel {
     private readonly TodolistContext context;
     public CreateModel( TodolistContext context ){
         this.context = context;
     }
-    // binds the incoming request data to the Operation property
     [BindProperty]
-    public Operation Operation { get; set; }
-    // OnGet, return the form to be filled
-    public IActionResult OnGet() {
+    public Mission Mission { get; set; }
+    public IActionResult OnGet( int operationId ){
+        Mission = new Mission {
+            OperationId = operationId
+        };
         return Page();
     }
-    // OnPost, Operation is filled with the incoming request data
-    // before entering this funcrion
     public async Task <IActionResult> OnPostAsync() {
-        // this is possible becoz of the [BindProperty] attribute
         if( !ModelState.IsValid ){
             return Page();
         }
-        context.Operations.Add( Operation );
+        context.Missions.Add( Mission );
         await context.SaveChangesAsync();
-        // here id should match the @page directive in the Create page
-        return RedirectToPage( "./Details", new { id = Operation.Id });
+        return RedirectToPage( "/Operations/Details", new { id = Mission.OperationId });
     }
-}
+} 
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////

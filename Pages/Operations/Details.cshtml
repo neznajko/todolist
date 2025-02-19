@@ -20,4 +20,19 @@
         <span class="fw-bold"> ) </span>
     </p>
 </div>
+<p class="display-5"> Missions </p>
+<ul>
+    @foreach (var mission in Model.Operation.Missions)
+    {
+        <li> 
+            @mission.IntelReport <br/>
+            @mission.OperationWindow <br/>
+            @mission.Status <br/>
+            <!--
+            <a asp-page="/Missions/Details" asp-route-id="@mission.Id"> 
+            </a>
+            -->
+        </li>
+    }
+
 <a asp-page="/Operations/Edit" asp-route-id="@Model.Operation.Id"> Edit </a>

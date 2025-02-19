@@ -1,0 +1,13 @@
+@page "{id:int}"
+@model Missions.DeleteModel
+@{
+    ViewData["Title"] = "Delete Missioin";
+}
+<h1 class="display-4"> Delete Mission </h1>
+<p> Are you sure you want to delete this mission? </p>
+<form method="POST">
+    <input type="hidden" asp-for="Mission.Id" />
+    <input type="hidden" asp-for="Mission.OperationId" />
+    <button type="submit" class="btn btn-danger"> Delete </button>
+</form>
+<a asp-page="/Operations/Details" asp-route-id="@Model.Mission.OperationId"> Back to Operation Details </a>

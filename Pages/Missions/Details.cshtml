@@ -1,0 +1,14 @@
+@page "{id:int}"
+@model Missions.DetailsModel
+@{
+    ViewData["Title"] = "Mission Details";
+}
+<p class="display-4"> Mission Details </p>
+
+<p> Intel Report: @Model.Mission.IntelReport </p>
+<p> Operation Window: @Model.Mission.OperationWindow days </p>
+<p> Status: @Model.Mission.Status </p>
+
+<a asp-page="/Operations/Details" asp-route-id="@Model.Mission.OperationId">
+    Operation
+</a>

@@ -1,4 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////
+using System.ComponentModel.DataAnnotations;
+////////////////////////////////////////////////////////////////////////////////////////
 namespace todolist.Models;
 ////////////////////////////////////////////////////////////////////////////////////////
 public enum MissionStatus {
@@ -12,7 +14,11 @@ public enum MissionStatus {
 public class Mission {
     public int Id { get; set; }
     public int OperationWindow { get; set; }
-    public required string IntelReport { get; set; }
+    [Required]
+    public string IntelReport { get; set; }
     public MissionStatus Status { get; set; }
+
+    public int OperationId { get; set; }
+    public Operation Operation { get; set; }
 }
 ////////////////////////////////////////////////////////////////////////////////////////

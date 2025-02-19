@@ -10,10 +10,8 @@ namespace todolist.Pages.Operations;
 ////////////////////////////////////////////////////////////////
 public class EditModel: PageModel {
     private readonly TodolistContext context;
-    public Array Statuses { get; }
     public EditModel( TodolistContext context ){
         this.context = context;
-        Statuses = Enum.GetValues( typeof( OperationStatus ));
     }
     // binds the incoming request data to the Operation property
     [BindProperty]

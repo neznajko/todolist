@@ -1,0 +1,27 @@
+@model Operations.FormModel
+@using todolist.Models
+
+<form method="POST">
+  <input type="hidden" asp-for="Operation.Id" />
+  <div class="form-group">
+    <label asp-for="Operation.Codename" class="control-label"></label>
+    <input type="text" list="cars" asp-for="Operation.Codename" class="form-control" />
+    <datalist id="cars">
+      <option>Volvo</option>
+      <option>Saab</option>
+      <option>Mercedes</option>
+      <option>Audi</option>
+    </datalist>
+  </div>
+  <div class="form-group">
+    <label asp-for="Operation.Status" class="control-label"></label>
+    <select asp-for="Operation.Status" class="form-control">
+      @foreach( var status in Enum.GetNames( typeof( OperationStatus ))){
+          <option value="@status"> @status </option>
+      }
+    </select>
+    <div class="form-group">
+      <input type="submit" value="@Model.SubmitValue" class="btn btn-primary" />
+    </div>
+  </div>
+</form>

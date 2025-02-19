@@ -1,0 +1,18 @@
+@page
+@model Operations.IndexModel
+@{
+    ViewData["Title"] = "Operations";
+}
+<p class="display-4"> Operations </p>
+
+@foreach ( var operation in Model.Operations ){
+    <div>
+        <a asp-page="/Operations/Details" 
+           asp-route-id="@operation.Id"> @operation.Codename </a>
+    </div>
+}
+
+<div>
+    <a class="btn btn-primary" href="/Operations/Create"> New Operation </a>   
+</div>
+
