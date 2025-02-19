@@ -16,7 +16,10 @@ public class IndexModel: PageModel {
     public IList <Operation> Operations { get; set; }
 
     public async Task OnGetAsync() {
-        Operations = await context.Operations.ToListAsync();
+        // Query all operations with their missions
+        Operations = await context.Operations
+        .Include( o => o.Missions )
+        .ToListAsync(); // convert DbSet to List
     }
 }
 ////////////////////////////////////////////////////////////////

@@ -2,7 +2,9 @@
 @using todolist.Models
 
 <form method="POST">
-  <input type="hidden" asp-for="Operation.Id" />
+  @if (Model.Operation.Id != 0) {
+    <input type="hidden" asp-for="Operation.Id" />
+  }
   <div class="form-group">
     <label asp-for="Operation.Codename" class="control-label"></label>
     <input type="text" list="cars" asp-for="Operation.Codename" class="form-control" />
@@ -21,7 +23,7 @@
       }
     </select>
     <div class="form-group">
-      <input type="submit" value="@Model.SubmitValue" class="btn btn-primary" />
+      <input type="submit" value="@Model.SubmitValue" class="btn btn-primary mt-4" />
     </div>
   </div>
 </form>

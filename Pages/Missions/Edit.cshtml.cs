@@ -26,7 +26,7 @@ public class EditModel: PageModel
         }
         context.Attach( Mission ).State = EntityState.Modified;
         await context.SaveChangesAsync();
-        return RedirectToPage( "/Operations/Details", new { id = Mission.OperationId });
+        return RedirectToPage( "/Missions/Details", new { id = Mission.Id });
     }
 }
 ////////////////////////////////////////////////////////////////

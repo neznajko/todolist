@@ -10,3 +10,9 @@
     Operation = Model.Operation, 
     SubmitValue = "Edit" 
 });
+
+<a class="btn btn-dark mt-4" 
+   asp-page="/Operations/Details"
+   asp-route-id="@Model.Operation.Id"> 
+   Back to Operation
+</a>

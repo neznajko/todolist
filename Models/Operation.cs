@@ -15,7 +15,6 @@ public class Operation {
     [Required]
     public string Codename { get; set; }
     public OperationStatus Status { get; set; }
-
     public List <Mission> Missions { get; set; } = new();
 }
 ////////////////////////////////////////////////////////////////////////////////////////

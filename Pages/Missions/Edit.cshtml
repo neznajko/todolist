@@ -29,6 +29,11 @@
     </div>
     <!-- Submit Button -->
     <div class="form-group">
-        <button type="submit" class="btn btn-primary"> Edit </button>
+        <button type="submit" class="btn btn-primary mt-4"> Edit </button>
     </div>
 </form>
+<a class="btn btn-primary mt-4" 
+   asp-page="/Missions/Details" 
+   asp-route-id="@Model.Mission.Id"> 
+   Back to Mission 
+</a>

@@ -17,6 +17,7 @@ public class CreateModel: PageModel {
     public Operation Operation { get; set; }
     // OnGet, return the form to be filled
     public IActionResult OnGet() {
+        Operation = new Operation();
         return Page();
     }
     // OnPost, Operation is filled with the incoming request data

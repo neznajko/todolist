@@ -9,6 +9,12 @@
 <p> Operation Window: @Model.Mission.OperationWindow days </p>
 <p> Status: @Model.Mission.Status </p>
 
-<a asp-page="/Operations/Details" asp-route-id="@Model.Mission.OperationId">
+<a class="btn btn-dark mt-4" asp-page="/Operations/Details" asp-route-id="@Model.Mission.OperationId">
     Operation
+</a>
+<a class="btn btn-success mt-4" asp-page="/Missions/Edit" asp-route-id="@Model.Mission.Id">
+    Edit
+</a>
+<a class="btn btn-danger mt-4" asp-page="/Missions/Delete" asp-route-id="@Model.Mission.Id">
+    Delete
 </a>

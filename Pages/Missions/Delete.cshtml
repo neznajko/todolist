@@ -10,4 +10,8 @@
     <input type="hidden" asp-for="Mission.OperationId" />
     <button type="submit" class="btn btn-danger"> Delete </button>
 </form>
-<a asp-page="/Operations/Details" asp-route-id="@Model.Mission.OperationId"> Back to Operation Details </a>
+<a class="btn btn-primary mt-4" 
+   asp-page="/Missions/Details" 
+   asp-route-id="@Model.Mission.Id"> 
+   Back to Mission 
+</a>

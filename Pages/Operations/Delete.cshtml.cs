@@ -24,7 +24,7 @@ class DeleteModel: PageModel {
         }
         context.Operations.Remove( Operation );
         await context.SaveChangesAsync();
-        return RedirectToPage( "/Index" );
+        return RedirectToPage( "/Operations/Index" );
     }
 }
 ////////////////////////////////////////////////////////////
