@@ -4,27 +4,19 @@ using todolist.Models;
 ////////////////////////////////////////////////////////////////
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 ////////////////////////////////////////////////////////////////
-namespace todolist.Pages.Missions;
+namespace todolist.Pages.Assignments;
 ////////////////////////////////////////////////////////////////
 public class DetailsModel: PageModel {
     private readonly TodolistContext context;
     public DetailsModel( TodolistContext context ){
         this.context = context;
     }
-    public Mission Mission { get; set; }
+    public Assignment Assignment { get; set; }
+    // OnGet
     public async Task <IActionResult> OnGetAsync( int id ){
-        Mission = await context.Missions
-        .Include( m => m.Operation )
-        .Include( m => m.Assignments )
-        .FirstOrDefaultAsync( m => m.Id == id );
-
-        return Mission == null ? NotFound() : Page();
+        Assignment = await context.Assignments.FindAsync( id );
+        return Assignment == null ? NotFound() : Page();
     }
 }
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////

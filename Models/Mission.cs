@@ -20,5 +20,8 @@ public class Mission {
 
     public int OperationId { get; set; }
     public Operation Operation { get; set; }
+
+    // one-to-many relationship
+    public List <Assignment> Assignments { get; set; } = new();
 }
 ////////////////////////////////////////////////////////////////////////////////////////

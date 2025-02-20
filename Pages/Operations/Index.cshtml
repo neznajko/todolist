@@ -24,6 +24,18 @@
                 <span> Operation Window( @mission.OperationWindow )</span>
                 <span> Status[ @mission.Status ]</span>
             </div>
+            <!-- Display Assignments for this Mission -->
+            <div class="ms-4">
+                @foreach (var assignment in mission.Assignments) {
+                    <div class="fs-6 d-flex justify-content-between">
+                        <a asp-page="/Assignments/Details" 
+                           asp-route-id="@assignment.Id"> 
+                           Assignment: @assignment.Objectives
+                        </a>
+                        <span> Status[ @assignment.Status ] </span>
+                    </div>
+                }
+            </div>
         }
     </div>
 }

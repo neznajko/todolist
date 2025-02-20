@@ -19,6 +19,7 @@ public class IndexModel: PageModel {
         // Query all operations with their missions
         Operations = await context.Operations
         .Include( o => o.Missions )
+        .ThenInclude( m => m.Assignments )
         .ToListAsync(); // convert DbSet to List
     }
 }

@@ -1,0 +1,31 @@
+@page "{id:int}"
+@model todolist.Pages.Assignments.EditModel
+@{
+    ViewData["Title"] = "Edit Assignment";
+}
+@using todolist.Models;
+<p class="display-4"> Edit Assignment </p>
+<form method="POST">
+    <input type="hidden" asp-for="Assignment.MissionId" />
+    <input type="hidden" asp-for="Assignment.Id" />
+    <div class="form-group">
+        <label asp-for="Assignment.Objectives" class="control-label"></label>
+        <input asp-for="Assignment.Objectives" class="form-control" />
+    </div> 
+    <div class="form-group">
+        <label asp-for="Assignment.Status" class="control-label"></label>
+        <select asp-for="Assignment.Status" class="form-control">
+            @foreach( var status in Enum.GetValues( typeof( AssignmentStatus ))){
+                <option value="@status"> @status </option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary mt-4"> Edit </button>
+    </div>
+</form>
+<a class="btn btn-dark mt-4" 
+   asp-page="/Assignments/Details"
+   asp-route-id="@Model.Assignment.Id"> 
+   Back to Assignment
+</a>

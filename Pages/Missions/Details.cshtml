@@ -9,6 +9,14 @@
 <p> Operation Window: @Model.Mission.OperationWindow days </p>
 <p> Status: @Model.Mission.Status </p>
 
+<p class="display-5"> Assignments </p>
+@foreach( var assignment in Model.Mission.Assignments ){
+    <p> 
+        Assignment: @assignment.Objectives
+        Status: @assignment.Status 
+    </p>
+}
+
 <a class="btn btn-dark mt-4" asp-page="/Operations/Details" asp-route-id="@Model.Mission.OperationId">
     Operation
 </a>
@@ -17,4 +25,8 @@
 </a>
 <a class="btn btn-danger mt-4" asp-page="/Missions/Delete" asp-route-id="@Model.Mission.Id">
     Delete
+</a>
+
+<a class="btn btn-dark mt-4" asp-page="/Assignments/Create" asp-route-missionId="@Model.Mission.Id">
+    Create Assignment
 </a>

@@ -1,0 +1,17 @@
+@page "{id:int}"
+@model todolist.Pages.Assignments.DetailsModel
+@{
+    ViewData["Title"] = "Assignment Details";
+}
+<h1 class="display-5"> Assignment Details </h1>
+
+<p> @Model.Assignment.Objectives </p>
+<p> @Model.Assignment.Status </p>
+
+<a class="btn btn-primary mt-4" asp-page="/Operations/Index"> Back </a>
+<a class="btn btn-primary mt-4" 
+   asp-page="/Assignments/Edit" 
+   asp-route-id="@Model.Assignment.Id"> Edit </a>
+<a class="btn btn-danger mt-4" 
+   asp-page="/Assignments/Delete" 
+   asp-route-id="@Model.Assignment.Id"> Delete </a>

@@ -1,0 +1,19 @@
+@page "{id:int}"
+@model Assignments.DeleteModel
+@{
+    ViewData["Title"] = "Delete Assignment";
+}
+<h1 class="display-4"> Delete Assignment </h1>
+<p> Are you sure you want to delete this assignment? </p>
+<form method="POST">
+    <!--
+    <input type="hidden" asp-for="Assignment.Id" />
+    <input type="hidden" asp-for="Assignment.MissionId" />
+    -->
+    <button type="submit" class="btn btn-danger"> Delete </button>
+</form>
+<a class="btn btn-primary mt-4" 
+   asp-page="/Assignments/Details" 
+   asp-route-id="@Model.Assignment.Id"> 
+   Back to Assignment 
+</a>
