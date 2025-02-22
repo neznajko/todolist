@@ -14,15 +14,27 @@ public class TodolistContext: DbContext {
         optionsBuilder.UseSqlite( @"Data source=todolist.db" );
     }
     protected override void OnModelCreating( ModelBuilder modelBuilder ){
+        modelBuilder.Entity <Operation> ()
+            .Property( o => o.Codename )
+            .IsRequired();
+
         modelBuilder.Entity <Mission> ()
             .HasOne( m => m.Operation )
             .WithMany( o => o.Missions )
             .HasForeignKey( m => m.OperationId );
+
+        modelBuilder.Entity <Mission> ()
+            .Property( m => m.IntelReport )
+            .IsRequired();   
+
         modelBuilder.Entity <Assignment> ()
             .HasOne( a => a.Mission )
             .WithMany( m => m.Assignments )
             .HasForeignKey( a => a.MissionId );
+
+        modelBuilder.Entity <Assignment> ()
+            .Property( a => a.Objectives )
+            .IsRequired();
     }
 }
-////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////

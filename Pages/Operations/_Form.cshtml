@@ -2,7 +2,7 @@
 @using todolist.Models
 
 <form method="POST">
-  @if (Model.Operation.Id != 0) {
+  @if( Model.Operation.Id != 0 ){ <!-- Edit -->
     <input type="hidden" asp-for="Operation.Id" />
   }
   <div class="form-group">

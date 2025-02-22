@@ -1,0 +1,34 @@
+@model Missions.FormModel
+@using todolist.Models
+
+<form method="POST">
+    <input type="hidden" asp-for="Mission.OperationId" />
+    @if( Model.Mission.Id != 0 ){ <!-- Edit -->
+        <input type="hidden" asp-for="Mission.Id" />
+    }
+    <!-- Operation Window -->
+    <div class="form-group">
+        <label asp-for="Mission.OperationWindow" class="control-label"></label>
+        <input asp-for="Mission.OperationWindow" class="form-control" />
+    </div>
+    <!-- Intel Report -->
+    <div class="form-group">
+        <label asp-for="Mission.IntelReport" class="control-label"></label>
+        <input asp-for="Mission.IntelReport" class="form-control" />
+    </div>
+    <!-- Status -->
+    <div class="form-group">
+        <label asp-for="Mission.Status" class="control-label"></label>
+        <select asp-for="Mission.Status" class="form-control">
+            @foreach( var status in Enum.GetValues( typeof( MissionStatus ))){
+                <option value="@status"> @status </option>
+            }
+        </select>
+    </div>
+    <!-- Submit Button -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary mt-4"> 
+            @Model.SubmitValue
+        </button>
+    </div>
+</form>

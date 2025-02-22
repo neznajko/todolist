@@ -8,7 +8,7 @@ namespace todolist.Pages.Assignments;
 
 public class CreateModel: PageModel {
     private readonly TodolistContext context;
-    public CreateModel(TodolistContext context) {
+    public CreateModel( TodolistContext context ){
         this.context = context;
     }
     [BindProperty]
