@@ -1,10 +1,48 @@
 /* acme-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap; 
   font-family: 'Acme';
   font-style: normal;
   font-weight: 400;
-  src: url('../lib/fonts/acme-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../lib/fonts/acme-v25-latin-regular.woff2') format('woff2'); 
+}
+/* alex-brush-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Alex Brush';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../lib/fonts/alex-brush-v22-latin-regular.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'Alumni Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../lib/fonts/alumni-sans-v18-latin-500.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'Alumni Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../lib/fonts/alumni-sans-v18-latin-500italic.woff2') format('woff2'); 
+}
+/* alumni-sans-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Alumni Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../lib/fonts/alumni-sans-v18-latin-regular.woff2') format('woff2'); 
+}
+/* alumni-sans-italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Alumni Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../lib/fonts/alumni-sans-v18-latin-italic.woff2') format('woff2'); 
 }
 
 html {
@@ -27,6 +65,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+  padding: 0.2rem;
+}
 main {
   flex-grow: 1;
   background: hsl(220,20%,40%);
@@ -38,7 +80,7 @@ main {
 
 footer  {
   border-top: 1rem solid hsl(20,80%,40%);
-}
+}*
 
 .privacy, .about {
   width: 75%;
@@ -46,7 +88,8 @@ footer  {
 }
 .privacy h1, .about h1 {
   color: hsl(224,24%,60%);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
+  font-family: 'Alex Brush', cursive;
 }
 .privacy p, .about p {
   color: hsl(224,24%,15%);
@@ -59,11 +102,12 @@ footer  {
 }
 
 .velcome {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: hsl(224,24%,13%);
+  font-family: 'Alumni Sans', sans-serif;
 }
 .velcome h1 {
-  color: hsl(224,44%,35%);
+  color: hsl(224,94%,58%);
   align-self: center;
   text-align: center; 
   background: hsl(210,20%,15%);
@@ -75,6 +119,49 @@ footer  {
 .velcome i {
   font-size: 1.5rem;
 }
+.velcome span {
+  font-family: 'Alumni Sans', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.assignment-details {
+  background: hsl(30,20%,10%);
+  color: hsl(15,20%,40%);
+  width: 50%;
+}
+.assignment-details li {
+  color: hsl(20,20%,55%);
+  background: hsl(20,23%,18%);
+  border: 1px solid hsl(20,23%,28%);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: monospace;
+}
+.key {
+  font-weight: 700;
+}
+.value {
+  font-style: italic;
+}
+.value a {
+  color: hsl(325,55%,60%);
+}
+.value a:hover {
+  color: hsl(330,25%,40%);
+}
+.btn-primary {
+  background: hsl(220,50%,30%);
+  color: hsl(220,20%,60%);
+}
+.btn-danger {
+  background: hsl(0,50%,35%);
+  color: hsl(0,60%,10%);
+}
+.card-header {
+  font-family: 'Alex Brush', cursive;
+}
 
 @media screen and (max-width: 576px) {
   main {
@@ -82,5 +169,18 @@ footer  {
   }
   .privacy {
     width: 85%;
+  }
+  .velcome {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .velcome h1 {
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .assignment-details {
+    width: 90%;
   }
 }

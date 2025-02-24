@@ -14,9 +14,14 @@ public class DetailsModel: PageModel {
     }
     //
     public Assignment Assignment { get; set; }
+    public Mission Mission { get; set; }
+    public Operation Operation { get; set; }
     public async Task <IActionResult> OnGetAsync( int id ){
         Assignment = await context.Assignments.FindAsync( id );
-        return Assignment == null ? NotFound() : Page();
+        if( Assignment == null ) return NotFound();
+        Mission = await context.Missions.FindAsync( Assignment.MissionId );
+        Operation = await context.Operations.FindAsync( Mission.OperationId );
+        return Page();
     }
 }
 ////////////////////////////////////////////////////////////////

@@ -1,18 +1,71 @@
 @page "{id:int}"
-@model todolist.Pages.Assignments.DetailsModel
+@model Assignments.DetailsModel
 @{
     ViewData["Title"] = "Assignment Details";
 }
-<h1 class="display-5"> Assignment Details </h1>
-
-<p> @Model.Assignment.Objectives </p>
-<p> @Model.Assignment.Status </p>
-
-<a class="btn btn-primary mt-4" 
-   asp-page="/Operations/Index"> Back </a>
-<a class="btn btn-primary mt-4" 
-   asp-page="/Assignments/Edit" 
-   asp-route-id="@Model.Assignment.Id"> Edit </a>
-<a class="btn btn-danger mt-4" 
-   asp-page="/Assignments/Delete" 
-   asp-route-id="@Model.Assignment.Id"> Delete </a>
+<!--------------------------------------------------------------
+################################################################
+################################################################
+#########     Assignment Details      ##########################
+################################################################
+######### Objectives: Eliminate enemy ##########################
+######### transmition system          ##########################
+################################################################
+######### Status:  [ Tactical Pause ] ##########################
+################################################################
+######### Mission:   Initiative TS-04 ##########################
+################################################################
+######### Operation:        Blackhawk ##########################
+################################################################
+######### [ Edit ] [ Delete ]         ##########################
+################################################################
+################################################################
+--------------------------------------------------------------->
+<div class="card assignment-details">
+   <div class="card-header">
+      <h1 class="display-5"> Assignment Details </h1>
+   </div>
+   <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+         <span class="key">Objectives</span> 
+         <span class="value">@Model.Assignment.Objectives</span>
+      </li>
+      <li class="list-group-item">
+         <span class="key">Status</span> 
+         <span class="value">@Model.Assignment.Status</span>
+      </li>
+      <li class="list-group-item">
+         <span class="key">Mission</span> 
+         <span class="value">
+            <a asp-page="/Missions/Details" 
+               asp-route-id="@Model.Mission.Id">
+               @Model.Mission.IntelReport
+            </a>
+         </span>
+      </li>
+      <li class="list-group-item">
+         <span class="key">Operation</span> 
+         <span class="value">
+            <a asp-page="/Operations/Details" 
+               asp-route-id="@Model.Operation.Id">
+               @Model.Operation.Codename
+            </a>
+         </span>
+      </li>
+   </ul>
+   <div class="card-footer">
+      <a class="btn btn-primary" 
+         asp-page="/Assignments/Edit" 
+         asp-route-id="@Model.Assignment.Id"> Edit </a>
+      <a class="btn btn-danger ms-2"
+         asp-page="/Assignments/Delete" 
+         asp-route-id="@Model.Assignment.Id"> Delete </a>  
+   </div>
+</div>
+<!--------------------------------------------------------------
+25. A city with 6 districts has 6 robberies in a particular week
+. Assume the robberies are located randomly, with all possibilit
+ies for which robbery occurred where equally likely. What is the 
+probability that some district had more than 1 robbery?
+----------------------------------------------------------------
+--------------------------------------------------------------->
