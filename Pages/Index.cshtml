@@ -3,18 +3,26 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
-<div class="d-flex flex-column">
-    <h1 class="display-4 text-light"> velcom </h1>
+<div class="velcome d-flex flex-column">
+    <h1 class="display-4"> velcome </h1>
     <p> Good @Model.TimeOfDay Agent 0012. The command center is secure </p>
     <p> Your encrypted channel is now active </p>
 
-    <p> 📡 Mission Briefing: Awaiting your next move </p>
-    <p> 🕰️ Current Operation Window: Ongoing </p>
-    <p> 🔐 Security Status: All systems operational </p>
+    <p>
+        <a class="btn btn-outline-dark me-2" href="/Operations/Index" role="button"> 
+            <i class="bi bi-cloud-haze2"></i> 
+        </a>
+        Mission Briefing: Awaiting your next move </p>
+    <p> 
+        <a class="btn btn-outline-dark me-2" href="/Operations/Index" role="button"> 
+            <i class="bi bi-clock"></i> 
+        </a>
+        Current Operation Window: Ongoing </p>
+    <p> 
+        <a class="btn btn-outline-dark me-2" href="/Operations/Index" role="button"> 
+            <i class="bi bi-columns-gap"></i> 
+        </a>
+        Security Status: All systems operational </p>
 
     <p> Stand by for further instructions. The agency is counting on you </p>
-    <div>
-        <a class="btn btn-primary" href="/Operations/Index"> All Operations </a>   
-    </div>
 </div>

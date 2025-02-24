@@ -1,22 +1,22 @@
+/* acme-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Acme';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../lib/fonts/acme-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html,body {
   height: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
+  min-height: 100%;
   background: hsl(220,20%,50%);
   display: flex;
   flex-direction: column;
@@ -25,4 +25,62 @@ body {
 
 a {
   text-decoration: none;
+}
+
+main {
+  flex-grow: 1;
+  background: hsl(220,20%,40%);
+  box-shadow: 5rem 1rem hsl(223,25%,20%);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+footer  {
+  border-top: 1rem solid hsl(20,80%,40%);
+}
+
+.privacy, .about {
+  width: 75%;
+  font-size: 1.15rem;
+}
+.privacy h1, .about h1 {
+  color: hsl(224,24%,60%);
+  margin-bottom: 0.8rem;
+}
+.privacy p, .about p {
+  color: hsl(224,24%,15%);
+  text-align: justify;
+  text-justify: inter-word;
+}
+.privacy a {
+  color: hsl(224,34%,25%);
+  font-style: bold;
+}
+
+.velcome {
+  font-size: 1.1rem;
+  color: hsl(224,24%,13%);
+}
+.velcome h1 {
+  color: hsl(224,44%,35%);
+  align-self: center;
+  text-align: center; 
+  background: hsl(210,20%,15%);
+  width: 120%;
+  margin-bottom: 1.2rem;
+  border-radius: 1rem;
+  font-family: 'Acme', sans-serif;
+}
+.velcome i {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    box-shadow: 3rem 0.7rem hsl(223,25%,20%);
+  }
+  .privacy {
+    width: 85%;
+  }
 }
