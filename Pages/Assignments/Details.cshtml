@@ -9,7 +9,7 @@
 #########     Assignment Details      ##########################
 ################################################################
 ######### Objectives: Eliminate enemy ##########################
-######### transmition system          ##########################
+######### transmission system         ##########################
 ################################################################
 ######### Status:  [ Tactical Pause ] ##########################
 ################################################################
@@ -64,8 +64,17 @@
 </div>
 <!--------------------------------------------------------------
 25. A city with 6 districts has 6 robberies in a particular week
-. Assume the robberies are located randomly, with all possibilit
-ies for which robbery occurred where equally likely. What is the 
+Assume the robberies are located randomly with all possibilities
+for which robbery occurred where equally likely. What is the 
 probability that some district had more than 1 robbery?
 ----------------------------------------------------------------
+This problem is not very clear, but we can think of it as this:
+lets throw a dice six times and if the first throw shows 5 that 
+means the first crime will be at district 5, if the second throw
+shows 1, the second crime will be at district 1, and so on. So 
+the total number of scenarios is 6^6. The only way there are no
+more than one crime in some district is if all districts have
+exactly one crime, this can happen in 6! ways. So the desired
+probability is 1 - 6!/6^6
 --------------------------------------------------------------->
+

@@ -1,3 +1,5 @@
+@import "form.css";
+
 /* acme-regular - latin */
 @font-face {
   font-display: swap; 
@@ -125,10 +127,12 @@ footer  {
   font-weight: 500;
 }
 
-.assignment-details {
+.assignment-details,
+.assignment-delete {
   background: hsl(30,20%,10%);
   color: hsl(15,20%,40%);
   width: 50%;
+  font-family: monospace;
 }
 .assignment-details li {
   color: hsl(20,20%,55%);
@@ -137,7 +141,6 @@ footer  {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-family: monospace;
 }
 .key {
   font-weight: 700;
@@ -161,6 +164,10 @@ footer  {
 }
 .card-header {
   font-family: 'Alex Brush', cursive;
+  margin-top: 1rem;
+}
+.assignment-delete .card-header {
+  border-bottom: 1px solid hsl(0,0%,20%);
 }
 
 @media screen and (max-width: 576px) {
@@ -180,7 +187,8 @@ footer  {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-  .assignment-details {
-    width: 90%;
+  .assignment-details,
+  .assignment-delete {
+    width: 98%;
   }
 }
