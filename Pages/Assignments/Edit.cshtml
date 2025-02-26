@@ -4,15 +4,19 @@
     ViewData["Title"] = "Edit Assignment";
 }
 <div class="form-con">
-    <p class="display-4"> Edit Assignment </p>
-    @await Html.PartialAsync("_Form", new Assignments.FormModel
-    {
-        Assignment = Model.Assignment,
-        SubmitValue = "Edit"
-    });
-    <a class="btn btn-dark mt-4" 
-       asp-page="/Assignments/Details"
-       asp-route-id="@Model.Assignment.Id"> 
-        Back to Assignment
-    </a>
+   <div class="form-header">Edit Assignment</div>
+   <div class="form-body">
+      @await Html.PartialAsync("_Form", new Assignments.FormModel
+      {
+          Assignment = Model.Assignment,
+          SubmitValue = "Edit"
+      })
+   </div>
+   <div class="form-footer">
+      <a class="btn btn-dark" 
+         asp-page="/Assignments/Details"
+         asp-route-id="@Model.Assignment.Id"> 
+            Back to Assignment
+      </a>
+   </div>
 </div>

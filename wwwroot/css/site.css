@@ -170,7 +170,7 @@ footer  {
   border-bottom: 1px solid hsl(0,0%,20%);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   main {
     box-shadow: 3rem 0.7rem hsl(223,25%,20%);
   }
