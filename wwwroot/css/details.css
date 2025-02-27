@@ -1,0 +1,66 @@
+/* ##########################################################
+   ##########################################################
+   ##########################################################
+   ########################################################## */
+
+.mission-details,
+.mission-delete,
+.assignment-details,
+.assignment-delete {
+    background: hsl(30,20%,10%);
+    color: hsl(15,20%,40%);
+    width: 50%;
+    font-family: monospace;
+}
+.mission-details li,
+.assignment-details li {
+    color: hsl(20,20%,55%);
+    background: hsl(20,23%,18%);
+    border: 1px solid hsl(20,23%,28%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.key {
+    font-weight: 700;
+}
+.value {
+    font-style: italic;
+}
+.value a {
+    color: hsl(325,55%,60%);
+}
+.value a:hover {
+    color: hsl(330,25%,40%);
+}
+
+.mission-delete .card-header,
+.assignment-delete .card-header {
+  border-bottom: 1px solid hsl(0,0%,20%);
+}
+.assignments-list {
+    font-size: 0.8rem;
+}
+.assignments-list a {
+    color: hsl(35,100%,40%);
+}
+.assignments-list a:hover {
+    color: hsl(340,18%,40%);
+}
+/* ##########################################################
+   ##########################################################
+   ##########################################################
+   ########################################################## */
+@media screen and (max-width: 992px) {
+
+    .mission-details,
+    .mission-delete,
+    .assignment-details,
+    .assignment-delete {
+        width: 98%;
+    }
+}
+/* ##########################################################
+   ##########################################################
+   ##########################################################
+   ########################################################## */

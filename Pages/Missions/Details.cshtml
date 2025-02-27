@@ -3,30 +3,67 @@
 @{
     ViewData["Title"] = "Mission Details";
 }
-<p class="display-4"> Mission Details </p>
+<div class="card mission-details">
+  
+  <div class="card-header">
+    <h1 class="display-5">Mission Details</h1>
+  </div>
 
-<p> Intel Report: @Model.Mission.IntelReport </p>
-<p> Operation Window: @Model.Mission.OperationWindow days </p>
-<p> Status: @Model.Mission.Status </p>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <span class="key">Intel Report</span>
+      <span class="value">@Model.Mission.IntelReport</span>
+    </li>
+    <li class="list-group-item">
+      <span class="key">Operation Window</span>
+      <span class="value">@Model.Mission.OperationWindow days</span>
+    </li>
+    <li class="list-group-item">
+      <span class="key">Status</span>
+      <span class="value">@Model.Mission.Status</span>
+    </li>
+    <li class="list-group-item">
+      <span class="key">Operation</span>
+      <span class="value">
+        <a asp-page="/Operations/Details"
+           asp-route-id="@Model.Mission.OperationId">
+          <i class="bi bi-caret-right-fill"></i>
+          @Model.Mission.Operation.Codename
+        </a>
+      </span>
+    </li>
+  </ul>
 
-<p class="display-5"> Assignments </p>
-@foreach( var assignment in Model.Mission.Assignments ){
-    <p> 
-        Assignment: @assignment.Objectives
-        Status: @assignment.Status 
-    </p>
-}
+  <div class="card-body">
+    <h1 class="display-6">Assignments</h1>
+  </div>
 
-<a class="btn btn-dark mt-4" asp-page="/Operations/Details" asp-route-id="@Model.Mission.OperationId">
-    Operation
-</a>
-<a class="btn btn-success mt-4" asp-page="/Missions/Edit" asp-route-id="@Model.Mission.Id">
-    Edit
-</a>
-<a class="btn btn-danger mt-4" asp-page="/Missions/Delete" asp-route-id="@Model.Mission.Id">
-    Delete
-</a>
+  <ul class="list-group list-group-flush">
+    @foreach( var assignment in Model.Mission.Assignments ){
+    <li class="list-group-item assignments-list">
+      <span class="key">
+        <a asp-page="/Assignments/Details" 
+           asp-route-id="@assignment.Id">
+          [ @assignment.Objectives ]
+        </a>
+      </span>
+      <span class="value">@assignment.Status</span>
+    </li>
+    }
+  </ul>
 
-<a class="btn btn-dark mt-4" asp-page="/Assignments/Create" asp-route-missionId="@Model.Mission.Id">
-    Create Assignment
-</a>
+  <div class="card-footer">
+    <a class="btn btn-primary" 
+       asp-page="/Missions/Edit" 
+       asp-route-id="@Model.Mission.Id">Edit</a>
+    <a class="btn btn-danger ms-1" 
+       asp-page="/Missions/Delete"
+       asp-route-id="@Model.Mission.Id">Delete</a>
+    <a class="btn btn-outline-light ms-1"
+       asp-page="/Assignments/Create"
+       asp-route-missionId="@Model.Mission.Id">NewAssignment</a>
+  </div>
+  
+</div>
+<!--------------------------------------------------------------
+--------------------------------------------------------------->

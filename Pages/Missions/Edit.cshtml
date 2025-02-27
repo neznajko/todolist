@@ -3,16 +3,24 @@
 @{
     ViewData["Title"] = "Edit Mission";
 }
-<p class="display-4"> Edit Mission </p>
+<div class="form-con">
+  
+  <div class="form-header">Edit Mission</div>
 
-@await Html.PartialAsync( "_Form", new Missions.FormModel
-{
-    Mission = Model.Mission,
-    SubmitValue = "Edit"
-});
+  <div class="form-body">
+     @await Html.PartialAsync( "_Form", new Missions.FormModel
+     {
+         Mission = Model.Mission,
+         SubmitValue = "Edit"
+     });
+  </div>
 
-<a class="btn btn-primary mt-4" 
-   asp-page="/Missions/Details" 
-   asp-route-id="@Model.Mission.Id"> 
-   Back to Mission 
-</a>
+  <div class="form-footer">
+    <a class="btn btn-dark" 
+       asp-page="/Missions/Details" 
+       asp-route-id="@Model.Mission.Id"> 
+      Back to Mission 
+    </a>
+  </div>
+  
+</div>
