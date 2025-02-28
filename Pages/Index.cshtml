@@ -4,28 +4,32 @@
     ViewData["Title"] = "Home page";
 }
 <div class="velcome d-flex flex-column">
-    <h1 class="display-4"> velcome </h1>
-    <p> Good @Model.TimeOfDay Agent 0012. The command center is secure.
-    Your encrypted channel is now active </p>
-
-    <div class="mt-3 mb-3">
-    <p>
-        <a class="btn btn-outline-dark me-2" href="/Operations/Index" role="button"> 
-            <i class="bi bi-cloud-haze2"></i> 
-        </a>
-        Mission Briefing: <span>Awaiting your next move<span></p>
-    <p> 
-        <a class="btn btn-outline-dark me-2" href="/Operations/Index" role="button"> 
-            <i class="bi bi-clock"></i> 
-        </a>
-        Current Operation Window: <span>Ongoing</span> </p>
-    <p> 
-        <a class="btn btn-outline-dark me-2" href="/Operations/Index" role="button"> 
-            <i class="bi bi-columns-gap"></i> 
-        </a>
-        Security Status: <span>All systems operational</span> </p>
-
-    </div>
-
-    <p> Stand by for further instructions. The agency is counting on you </p>
+  <h1>V e l c o m e</h1>
+  <p>Good @Model.TimeOfDay Agent 0012. The command center is secure.
+    Your encrypted channel is now active</p>
+  <ul>
+    <li>
+      <a class="btn btn-dark me-2"
+         href="/Operations/Index" role="button"> 
+        <i class="bi bi-cloud-haze2"></i> 
+      </a>
+      <span>Mission Briefing: Awaiting your next move<span>
+    </li>
+    <li> 
+      <a class="btn btn-dark me-2"
+         href="/Operations/Index" role="button"> 
+        <i class="bi bi-clock"></i> 
+      </a>
+      <span>Current Operation Window: Ongoing</span>
+    </li>
+    <li> 
+      <a class="btn btn-dark me-2"
+         href="/Operations/Index" role="button"> 
+        <i class="bi bi-columns-gap"></i> 
+      </a>
+      <span>Security Status: All systems operational</span>
+    </li>
+  </ul>
+  <p class="pt-2">Stand by for further instructions. The agency
+    is counting on you</p>
 </div>

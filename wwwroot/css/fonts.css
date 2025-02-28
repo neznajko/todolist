@@ -1,0 +1,46 @@
+/* acme-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Acme';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../lib/fonts/acme-v25-latin-regular.woff2') format('woff2'); 
+}
+/* alex-brush-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Alex Brush';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../lib/fonts/alex-brush-v22-latin-regular.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'Alumni Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../lib/fonts/alumni-sans-v18-latin-500.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'Alumni Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../lib/fonts/alumni-sans-v18-latin-500italic.woff2') format('woff2'); 
+}
+/* alumni-sans-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Alumni Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../lib/fonts/alumni-sans-v18-latin-regular.woff2') format('woff2'); 
+}
+/* alumni-sans-italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Alumni Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../lib/fonts/alumni-sans-v18-latin-italic.woff2') format('woff2'); 
+}

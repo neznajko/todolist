@@ -1,63 +1,83 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> @ViewData["Title"] - todolist </title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/todolist.styles.css" asp-append-version="true" />
+  <meta charset="utf-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+  <title>@ViewData["Title"] - todolist</title>
+  <link rel="stylesheet"
+        href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet"
+        href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet"
+        href="~/css/site.css"
+        asp-append-version="true"/>
+  <link rel="stylesheet"
+        href="~/todolist.styles.css"
+        asp-append-version="true"/>
 </head>
 <body>
-    <nav class="container-fluid navbar navbar-expand-sm navbar-dark bg-dark ps-3 pe-3">
-        <a class="navbar-brand" asp-page="/Index"> todolist </a>
-        <button class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target=".navbar-collapse" 
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false" 
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-            <ul class="navbar-nav flex-grow-1 justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link text-primary" asp-page="/Index"> Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-primary" asp-page="/About"> About </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="container-fluid navbar navbar-expand-sm
+              navbar-dark bg-dark ps-3 pe-3">
+    <a class="navbar-brand" asp-page="/Index"> todolist </a>
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target=".navbar-collapse" 
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse d-sm-inline-flex
+                justify-content-between">
+      <ul class="navbar-nav flex-grow-1 justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link"
+             asp-page="/Index"> Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             asp-page="/About"> About </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
     
-    <main class="container w-80 d-flex flex-column justify-content-center align-items-center">
-        @RenderBody()
-    </main>
+  <main>
+    <div class="render-body">
+      @RenderBody()
+    </div>
+  </main>
 
-    <footer class="container-fluid p-3 bg-primary text-light">
-        &copy; 2025 todolist <a asp-page="/Privacy" class="ms-2 text-dark"> Privacy </a>
-    </footer>
+  <footer class="container-fluid p-3 bg-primary text-light">
+    &copy; 2025 todolist <a asp-page="/Privacy"
+                            class="ms-2 text-dark"> Privacy </a>
+  </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+  @await RenderSectionAsync("Scripts", required: false)
+  
 </body>
 </html>
 <!--------------------------------------------------------------
- <> 2.1.16:  
-A body of mass m is attached to two springs of stiffness k1 and k2
-connected in series. A constant force F is applied to the free end of
-the spring chain. What is the total elongation of the springs if the
-oscillations have already stopped?
+<> 2.1.16: A body of mass m is attached to two springs connected 
+in series with stiffness coefficients k₁ and k₂. A constant force 
+F is applied to the free end of the spring chain. What is the total 
+elongation of the springs if the oscillations have already stopped?
 ################################################################
 # (m)-wwwwwww-\/\/\/\/\/\/\/~~~~~~~> F
 ################################################################
-################################################################
+# In state of balance we'll have k₁x₁ = k₂x₂ = F, so
+# k₁x₁k₂ = Fk₂, and
+# k₂x₂k₁ = Fk₁, zo
+# k₁k₂(x₁ + x₂) = F(k₁ + k₂), and x = F(k₁ + k₂)/k₁k₂, this
+# means we can replace two strings with one having effective
+# stiffness coefficient k = k₁k₂/(k₁ + k₂)
 ################################################################
 ################################################################
 ################################################################

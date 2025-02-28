@@ -1,0 +1,49 @@
+:root {
+    --velcome-fgr: hsl(224,34%,58%);
+    --velcome-h1-fgr: hsl(224,94%,58%);
+    --velcome-h1-bgr: hsl(210,20%,15%);
+}
+.velcome {
+    font-size: 1.4rem;
+    color: var( --velcome-fgr );
+    font-family: 'Alumni Sans', sans-serif;
+}
+.velcome h1 {
+    color: var( --velcome-h1-fgr );
+    align-self: center;
+    text-align: center;
+    width: calc( 100% + 2rem );
+    background: var( --velcome-h1-bgr );
+    border-radius: 1rem;
+    font-family: 'Acme', sans-serif;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.velcome i {
+    color: var( --velcome-h1-fgr );
+    font-size: 1.5rem;
+}
+.velcome i:hover {
+    color: var( --velcome-fgr );
+}
+.velcome span {
+    font-family: 'Alumni Sans', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var( --velcome-h1-bgr );
+}
+.velcome li {
+    padding-top: 0.5rem;
+}
+@media( max-width: 576px ){
+    .velcome {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .velcome h1 {
+        width: 100%;
+    }
+    .velcome span {
+        font-size: 1.2rem;
+    }
+}
