@@ -2,10 +2,11 @@
    ##########################################################
    ########################################################## */
 .form-con {
-    background: hsl(20,15%,58%);
+    background: var( --form-con-bgr );
     display: flex;
     flex-direction: column;
     width: 50%;
+    min-width: 576px;
     padding: 1.2rem;
     border-radius: 1rem;
 }
@@ -13,8 +14,8 @@
    ##########################################################
    ########################################################## */
 .form-header {
-    background: hsl(250,30%,10%);
-    color: hsl(30,100%,60%);
+    background: var( --form-header-bgr );
+    color:  var( --form-header-fgr );
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -27,19 +28,19 @@
 }
 .form-body label {
     font-size: 1rem;
-    color: hsl(0,50%,25%);
+    color: var( --form-body-fgr );
     background: none;
     padding: 0.2rem;
 }
 .form-body select, .form-body input {
-    color: hsl(0,50%,25%);
-    background: hsl(0,25%,50%);
+    color: var( --form-body-fgr );
+    background: var( --form-body-bgr );
 }
 .form-control {
-    border: 2px solid hsl(0,20%,40%);
+    border: 2px solid var( --form-control );
 }
 .form-control:focus {
-    background: hsl(0,12%,75%);
+    background: var( --form-control-focus );
 }
 .form-submit {
     padding: 1rem 0 1rem 0;
@@ -53,9 +54,10 @@
 /* ##########################################################
    ##########################################################
    ########################################################## */
-@media screen and ( max-width: 992px ){
+@media( max-width: 576px ){
     .form-con {
         width: 100%;
+        min-width: 100%;
     }
 }
 /* ##########################################################

@@ -1,0 +1,26 @@
+.about {
+    width: 75%;
+    font-size: 1.15rem;
+}
+.about h1 {
+    color: var( --about-h1 );
+    margin-bottom: 0.4rem;
+    font-family: 'Alex Brush', cursive;
+}
+.about p {
+    color: var( --about-p );
+    text-align: justify;
+    text-justify: inter-word;
+}
+.about a {
+    color: var( --about-a );
+    font-style: italic;
+}
+.about a:hover {
+    opacity: 0.5;
+}
+@media( max-width: 576px ){ 
+    .about {
+        width: 85%;
+    }
+}

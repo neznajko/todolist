@@ -1,7 +1,14 @@
+@import "colors.css";
 @import "form.css";
 @import "details.css";
 @import "index.css";
+@import "dom.css";
+@import "bootstrap.css";
+@import "about.css";
 
+/* ##########################################################
+   #########[ Google Fonts ]#################################
+   ########################################################## */
 @font-face {
   font-display: swap; 
   font-family: 'Acme';
@@ -50,46 +57,14 @@
   src: url('../lib/fonts/alumni-sans-v18-latin-italic.woff2')
        format('woff2'); 
 }
-
-:root {
-    --main-bgr: hsl(220,32%,35%);
-}
-
-html {
-    height: 100%;
-}
-
-* {
-    box-sizing: border-box;
-}
-
+/* ##########################################################
+   #####[ mbody ]############################################
+   ########################################################## */
 body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-a {
-    text-decoration: none;
-}
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-p {
-    margin: 0;
-    padding: 0;
-}
-/* ##########################################################
-   #####[ bootstrap ]########################################
-   ########################################################## */
-.nav-link {
-    color: var( --velcome-h1-fgr );
-}
-.nav-link:hover {
-    color: var( --main-bgr );
 }
 /* ##########################################################
    #####[ main ]#############################################
@@ -109,51 +84,8 @@ main {
    #####[ footer ]###########################################
    ########################################################## */
 footer  {
-  border-top: 1rem solid hsl(20,80%,40%);
+    border-top: 1rem solid var( --footer-border );
 }
-
-.privacy, .about {
-  width: 75%;
-  font-size: 1.15rem;
-}
-.privacy h1, .about h1 {
-  color: hsl(224,24%,60%);
-  margin-bottom: 0.4rem;
-  font-family: 'Alex Brush', cursive;
-}
-.privacy p, .about p {
-  color: hsl(224,24%,15%);
-  text-align: justify;
-  text-justify: inter-word;
-}
-.privacy a {
-  color: hsl(224,34%,25%);
-  font-style: bold;
-}
-
-.btn-primary {
-  background: hsl(220,50%,30%);
-  color: hsl(220,20%,60%);
-}
-.btn-danger {
-  background: hsl(0,50%,35%);
-  color: hsl(0,60%,10%);
-}
-.btn-outline-light {
-    color:hsl(10,20%,70%);
-    border: 1px solid hsl(10,20%,70%);
-}
-.btn-outline-light:hover {
-    background: hsl(10,20%,50%);;
-}
-
-.card-header {
-  font-family: 'Alex Brush', cursive;
-  margin-top: 1rem;
-}
-
-@media screen and (max-width: 992px) {
-  .privacy {
-    width: 85%;
-  }
-}
+/* ##########################################################
+   ##########################################################
+   ########################################################## */

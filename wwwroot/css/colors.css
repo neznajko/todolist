@@ -1,0 +1,41 @@
+:root {
+    --main-bgr: hsl(220,32%,35%);
+    --footer-border: hsl(20,80%,40%);
+    
+    --velcome-fgr: hsl(224,34%,58%);
+    --velcome-h1-fgr: hsl(224,94%,58%);
+    --velcome-h1-bgr: hsl(210,20%,15%);
+
+    --about-h1: hsl(224,24%,60%);
+    --about-p: hsl(224,24%,15%);
+    --about-a: hsl(224,34%,55%);
+
+    --btn-primary-bgr: hsl(220,50%,30%);
+    --btn-primary-fgr: hsl(220,20%,60%);
+    --btn-danger-bgr: hsl(0,50%,35%);
+    --btn-danger-fgr: hsl(0,60%,10%);
+    --btn-outline-light: hsl(10,20%,70%);
+    --btn-outline-light-hover: hsl(10,20%,50%);
+
+    --details-bgr: hsl(30,20%,10%);
+    --details-fgr: hsl(15,20%,40%);
+    --details-li-fgr: hsl(20,20%,55%);
+    --details-li-bgr: hsl(20,23%,18%);
+    --details-li-border: hsl(20,23%,28%);
+
+    --value-a: hsl(325,55%,60%);
+    --value-a-hover: hsl(330,25%,40%);
+
+    --delete-border: hsl(0,0%,20%);
+
+    --assignment-list: hsl(35,100%,40%);
+    --assignment-list-hover: hsl(340,18%,40%);
+
+    --form-con-bgr: hsl(20,15%,58%);
+    --form-header-bgr: hsl(250,30%,10%);
+    --form-header-fgr: hsl(30,100%,60%);
+    --form-body-fgr: hsl(0,50%,25%);
+    --form-body-bgr: hsl(0,25%,50%);
+    --form-control: hsl(0,20%,40%);
+    --form-control-focus: hsl(0,12%,75%);
+}
