@@ -9,10 +9,18 @@
     <label asp-for="Operation.Codename" class="control-label"></label>
     <input type="text" list="cars" asp-for="Operation.Codename" class="form-control" />
     <datalist id="cars">
-      <option>Volvo</option>
-      <option>Saab</option>
-      <option>Mercedes</option>
-      <option>Audi</option>
+      <option>Task Force Alpha</option>
+      <option>Cipher Storm</option>
+      <option>Intel Secure Protocol</option>
+      <option>Blackout Phase</option>
+      <option>Omega Cipher</option>
+      <option>Shadowstrike</option>
+      <option>Nova Lockdown</option>
+      <option>Hyperion Mandate</option>
+      <option>Secret Squad</option>
+      <option>Midnight Vortex</option>
+      <option>Stormbreaker</option>
+      <option>Deep Horizon Recon</option>
     </datalist>
   </div>
   <div class="form-group">
@@ -23,7 +31,10 @@
       }
     </select>
     <div class="form-group">
-      <input type="submit" value="@Model.SubmitValue" class="btn btn-primary mt-4" />
+      <button type="submit"
+              class="btn btn-primary mt-4" >
+        @Model.SubmitValue
+      </button>
     </div>
   </div>
 </form>

@@ -4,34 +4,57 @@
     ViewData["Title"] = "Operation Details";
 }
 
-<div class="fs-3"> 
-    <p> 
-        <span class="fw-bold">
-            Codename( 
-        </span> 
-        @Model.Operation.Codename 
-        <span class="fw-bold"> ) </span>
-    </p>
-    <p> 
-        <span class="fw-bold"> 
-            Status( 
-        </span> 
-        @Model.Operation.Status 
-        <span class="fw-bold"> ) </span>
-    </p>
-</div>
-<p class="display-6"> Missions </p>
-<ul class="fs-4">
-    @foreach (var mission in Model.Operation.Missions)
-    {
-        <li> 
-            <a asp-page="/Missions/Details" asp-route-id="@mission.Id"> 
-                @mission.IntelReport
-            </a>
-        </li>
+<div class="card details">
+
+  <div class="card-header">
+    <h1 class="display-5">Operation Details</h1>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <span class="key">Codename</span>
+      <span class="value">@Model.Operation.Codename</span>
+    </li>
+    <li class="list-group-item">
+      <span class="key">Status</span>
+      <span class="value">@Model.Operation.Status</span>
+    </li>
+  </ul>
+
+  <div class="card-body">
+    <h1 class="display-6">Missions</h1>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    @foreach( var mission in Model.Operation.Missions ){
+      <li class="list-group-item assignments-list">
+        <span class="key">
+          <a asp-page="/Missions/Details" 
+             asp-route-id="@mission.Id">
+            [ @mission.IntelReport ]
+          </a>
+        </span>
+        <span class="value">@mission.Status</span>
+      </li>
     }
-</ul>
-<a class="btn btn-primary mt-4" asp-page="/Operations/Edit" asp-route-id="@Model.Operation.Id"> Edit </a>
-<a class="btn btn-danger mt-4" asp-page="/Operations/Delete" asp-route-id="@Model.Operation.Id"> Delete </a>
-<a class="btn btn-primary mt-4" asp-page="/Missions/Create" asp-route-operationId="@Model.Operation.Id"> New Mission </a>
-<a class="btn btn-primary mt-4" asp-page="/Operations/Index"> Back to List </a>
+  </ul>
+
+  <div class="card-footer">
+    <a class="btn btn-primary"
+       asp-page="/Operations/Edit"
+       asp-route-id="@Model.Operation.Id">Edit</a>
+    <a class="btn btn-danger"
+       asp-page="/Operations/Delete"
+       asp-route-id="@Model.Operation.Id">Delete</a>
+    <a class="btn btn-outline-light"
+       asp-page="/Missions/Create"
+       asp-route-operationId="@Model.Operation.Id">
+      <i class="bi bi-folder-plus"></i>
+    </a>
+    <a class="btn btn-outline-primary"
+       href="/Operations/Index" role="button"> 
+      Back </i> 
+    </a>
+  </div>
+
+</div>

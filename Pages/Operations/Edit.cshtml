@@ -1,18 +1,26 @@
 @page "{id:int}"
 @model Operations.EditModel
 @{
-    ViewData[ "Title" ] = "Edit Operation";
+    ViewData["Title"] = "Edit Operation";
 }
+<div class="form-con">
+  
+  <div class="form-header">Edit Operation</div>
+  
+  <div class="form-body">
+     @await Html.PartialAsync( "_Form", new Operations.FormModel 
+     { 
+         Operation = Model.Operation, 
+         SubmitValue = "Edit" 
+     });
+  </div>
 
-<h1 class="display-4"> Edit Operation </h1>
-@await Html.PartialAsync( "_Form", new Operations.FormModel 
-{ 
-    Operation = Model.Operation, 
-    SubmitValue = "Edit" 
-});
+  <div class="form-footer">
+    <a class="btn btn-dark" 
+       asp-page="/Operations/Details"
+       asp-route-id="@Model.Operation.Id"> 
+      Back to Operation
+    </a>
+  </div>
 
-<a class="btn btn-dark mt-4" 
-   asp-page="/Operations/Details"
-   asp-route-id="@Model.Operation.Id"> 
-   Back to Operation
-</a>
+</div>
