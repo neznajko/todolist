@@ -1,0 +1,21 @@
+@page
+@model Assignments.IndexModel
+@{
+    ViewData["Title"] = "Assignments";
+}
+<div class="list-con">
+    <div class="list-title">@ViewData["Title"]</div>
+    <div class="list">
+        @foreach( var assignment in Model.Assignments ){
+            <div class="list-item">
+                <a asp-page="/Assignments/Details"
+                   asp-route-id="@assignment.Id">@assignment.Objectives</a>
+                <p>@assignment.Status</p>    
+            </div>
+        }
+    </div>
+    <div class="list-footer">
+        <a class="btn btn-dark"
+           asp-page="/Index"> Back </a>
+    </div>
+</div>

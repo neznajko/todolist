@@ -1,0 +1,21 @@
+@page
+@model Missions.IndexModel
+@{
+    ViewData["Title"] = "Missions";
+}
+<div class="list-con">
+    <div class="list-title">Missions</div>
+    <div class="list">
+        @foreach( var mission in Model.Missions ){
+            <div class="list-item">
+                <a asp-page="/Missions/Details"
+                   asp-route-id="@mission.Id">@mission.IntelReport</a>
+                <p>@mission.Status</p>    
+            </div>
+        }
+    </div>
+    <div class="list-footer">
+        <a class="btn btn-dark"
+           asp-page="/Index"> Back </a>
+    </div>
+</div>

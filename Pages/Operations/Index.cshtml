@@ -3,7 +3,26 @@
 @{
     ViewData["Title"] = "Operations";
 }
-
+<div class="list-con">
+    <div class="list-title">@ViewData["Title"]</div>
+    <div class="list">
+        @foreach( var opperation in Model.Operations ){
+            <div class="list-item">
+                <a asp-page="/Operations/Details"
+                   asp-route-id="@opperation.Id">@opperation.Codename</a>
+                <p>@opperation.Status</p>    
+            </div>
+        }
+    </div>
+    <div class="list-footer">
+        <a class="btn btn-primary"
+           style="margin-right: 0.7rem;"  
+           asp-page="/Operations/Create"> New Operation </a>
+        <a class="btn btn-dark"
+           asp-page="/Index"> Back </a>
+    </div>
+</div>
+<!--
 @foreach ( var operation in Model.Operations ){
     <div class="fs-4 d-flex justify-content-between" style="">
         <a asp-page="/Operations/Details" 
@@ -24,7 +43,6 @@
                 <span> Operation Window( @mission.OperationWindow )</span>
                 <span> Status[ @mission.Status ]</span>
             </div>
-            <!-- Display Assignments for this Mission -->
             <div class="ms-4">
                 @foreach (var assignment in mission.Assignments) {
                     <div class="fs-6 d-flex justify-content-between">
@@ -39,8 +57,7 @@
         }
     </div>
 }
-
 <div>
     <a class="btn btn-primary mt-4" href="/Operations/Create"> New Operation </a>   
 </div>
-
+-->

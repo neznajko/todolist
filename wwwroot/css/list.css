@@ -1,0 +1,37 @@
+.list-con {
+    background: blue;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+.list-title,
+.list-footer {
+    background: brown;
+    text-align: center;
+    padding: 1rem;
+}
+.list-footer {
+    text-align: end;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+}
+.list > .list-item:first-child {
+    border-top:none;
+}
+.list-item {
+    border-top: 1px solid white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.list-item a {
+    color: red;
+}
+.list-item p {
+    color: pink;
+}
+@media( max-width: 576px ){
+}
