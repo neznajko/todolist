@@ -38,4 +38,10 @@
     --form-body-bgr: hsl(0,25%,50%);
     --form-control: hsl(0,20%,40%);
     --form-control-focus: hsl(0,12%,75%);
+
+    --list-fgr-a: hsl( 5, 40%, 21% );
+    --list-fgr-b: hsl( 180, 100%, 50% );
+    --list-fgr-c: hsl( 340, 50%, 80% );
+    --list-bgr-a: hsl( 5, 20%, 18% );
+    --list-bgr-b: hsl( 200, 15%, 15% );
 }

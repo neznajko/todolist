@@ -58,6 +58,14 @@
   src: url('../lib/fonts/alumni-sans-v18-latin-italic.woff2')
        format('woff2'); 
 }
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik Mono One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../lib/fonts/rubik-mono-one-v18-latin-regular.woff2')
+       format('woff2');
+}
 /* ##########################################################
    #####[ mbody ]############################################
    ########################################################## */

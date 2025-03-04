@@ -1,13 +1,19 @@
 .list-con {
-    background: blue;
-    color: white;
+    background: var( --list-bgr-b );
+    color: var( --list-fgr-a );
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    font-family: serif;
+    font-size: 1rem;
+}
+.list-title {
+    font-family: 'Rubik Mono One';
+    font-size: 1.4rem;
 }
 .list-title,
 .list-footer {
-    background: brown;
+    background: var( --list-bgr-a );
     text-align: center;
     padding: 1rem;
 }
@@ -22,16 +28,19 @@
     border-top:none;
 }
 .list-item {
-    border-top: 1px solid white;
+    border-top: 1px solid var( --list-bgr-a );
     padding: 1rem;
     display: flex;
     justify-content: space-between;
 }
 .list-item a {
-    color: red;
+    color: var( --list-fgr-b );
 }
 .list-item p {
-    color: pink;
+    color: var( --list-fgr-c );
 }
 @media( max-width: 576px ){
+    .list-con {
+        font-size: 0.9rem;
+    }
 }
