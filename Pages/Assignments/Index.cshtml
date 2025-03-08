@@ -9,7 +9,10 @@
         @foreach( var assignment in Model.Assignments ){
             <div class="list-item">
                 <a asp-page="/Assignments/Details"
-                   asp-route-id="@assignment.Id">@assignment.Objectives</a>
+                   asp-route-id="@assignment.Id">
+                   <i class="bi bi-caret-right-fill"></i>
+                   @assignment.Objectives
+                </a>
                 <p>@assignment.Status</p>    
             </div>
         }

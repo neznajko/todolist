@@ -9,7 +9,9 @@
         @foreach( var opperation in Model.Operations ){
             <div class="list-item">
                 <a asp-page="/Operations/Details"
-                   asp-route-id="@opperation.Id">@opperation.Codename</a>
+                   asp-route-id="@opperation.Id">
+                   <i class="bi bi-caret-right-fill"></i>
+                   @opperation.Codename</a>
                 <p>@opperation.Status</p>    
             </div>
         }
@@ -22,42 +24,3 @@
            asp-page="/Index"> Back </a>
     </div>
 </div>
-<!--
-@foreach ( var operation in Model.Operations ){
-    <div class="fs-4 d-flex justify-content-between" style="">
-        <a asp-page="/Operations/Details" 
-           asp-route-id="@operation.Id"> 
-           Operation: @operation.Codename
-        </a>
-        <span class="text-light">
-            Status[ @operation.Status ]
-        </span>
-    </div>
-    <div class="text-dark">
-        @foreach( var mission in operation.Missions ){
-            <div class="fs-6 d-flex justify-content-between">
-                <a asp-page="/Missions/Details" 
-                   asp-route-id="@mission.Id"> 
-                   Mission: @mission.IntelReport
-                </a>
-                <span> Operation Window( @mission.OperationWindow )</span>
-                <span> Status[ @mission.Status ]</span>
-            </div>
-            <div class="ms-4">
-                @foreach (var assignment in mission.Assignments) {
-                    <div class="fs-6 d-flex justify-content-between">
-                        <a asp-page="/Assignments/Details" 
-                           asp-route-id="@assignment.Id"> 
-                           Assignment: @assignment.Objectives
-                        </a>
-                        <span> Status[ @assignment.Status ] </span>
-                    </div>
-                }
-            </div>
-        }
-    </div>
-}
-<div>
-    <a class="btn btn-primary mt-4" href="/Operations/Create"> New Operation </a>   
-</div>
--->

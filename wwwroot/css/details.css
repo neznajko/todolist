@@ -2,6 +2,9 @@
    ##########################################################
    ##########################################################
    ########################################################## */
+:root {
+    --key-value-margin: calc(( 100% - 500px ) / 2 );
+}
 .details,
 .delete {
     background: var( --details-bgr );
@@ -19,9 +22,11 @@
 }
 .key {
     font-weight: 700;
+    margin-left: var( --key-value-margin );
 }
 .value {
     font-style: italic;
+    margin-right: var( --key-value-margin );
 }
 .value a {
     color: var( --value-a );
@@ -49,6 +54,12 @@
     .details,
     .delete {
         width: 100%;
+    }
+    .key {
+        margin-left: 0;
+    }
+    .value {
+        margin-right: 0;
     }
 }
 /* ##########################################################
