@@ -1,10 +1,12 @@
 version: '3.8'  # Docker Compose version
 services:
-  app:  # Your ASP.NET Core app service
-    image: todolist:v6  # The Docker image to use
-    container_name: todolist-app  # Name of the container
+  todolist:  # Your ASP.NET Core app service
+    image: todolist:v13  # The Docker image to use
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"  # Map host port 8080 to container port 8080
     volumes:
-      - ./data:/app  # Mount a local folder to /app in the container
+      - ./db:/app/db  # Mount the local db folder to /app/db in the container
     restart: always  # Automatically restart the container if it stops

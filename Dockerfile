@@ -1,5 +1,5 @@
 #
-# Build Stage (uses full SDK), ( the comments are not from CGPT! )
+# Build Stage (uses full SDK), the comments are not from CGPT or DeepSeek!
 #
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
@@ -15,7 +15,7 @@ COPY . .
 #
 # Build the app
 #
-RUN dotnet publish -c Release -o /app/published
+RUN dotnet publish todolist.csproj -c Release -o /app/published
 #
 # Runtime Stage (uses lightweight ASP.NET runtime image)
 #
@@ -26,9 +26,9 @@ WORKDIR /app
 #
 COPY --from=build /app/published .
 #
-# Copy the local database file into the container
+# Make it happen
 #
-COPY todolist.db .
+RUN mkdir db
 #
 # Expose port
 #
@@ -37,4 +37,3 @@ EXPOSE 8080
 # Start the application
 #
 CMD ["dotnet", "todolist.dll"]
-

@@ -11,7 +11,7 @@ public class TodolistContext: DbContext {
     public DbSet <Assignment> Assignments { get; set; }
 
     protected override void OnConfiguring( DbContextOptionsBuilder optionsBuilder ){
-        optionsBuilder.UseSqlite( @"Data source=todolist.db" );
+        optionsBuilder.UseSqlite( $"Data source=db/todolist.db" );
     }
     protected override void OnModelCreating( ModelBuilder modelBuilder ){
         modelBuilder.Entity <Operation> ()
