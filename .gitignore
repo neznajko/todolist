@@ -7,7 +7,7 @@
 log.md
 
 # Ignore SQLite database files
-db/*.db
+# db/*.db
 db/*.db-wal
 db/*.db-shm
 
