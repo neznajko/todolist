@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 <div class="velcome d-flex flex-column">
-  <h1>V e l c o m e</h1>
+  <h1>W e l l c o m e</h1>
   <p>Good @Model.TimeOfDay Agent 0012. The command center is secure.
     Your encrypted channel is now active</p>
   <ul>
@@ -13,21 +13,21 @@
          href="/Operations/Index" role="button"> 
         <i class="bi bi-cloud-haze2"></i> 
       </a>
-      <span>Mission Briefing: Awaiting your next move<span>
+      <span class="briefing">Mission Briefing: </span><span>Awaiting your next move</span>
     </li>
     <li> 
       <a class="btn btn-dark me-2"
          href="/Missions/Index" role="button"> 
         <i class="bi bi-clock"></i> 
       </a>
-      <span>Current Operation Window: Ongoing</span>
+      <span class="briefing">Current Operation Window: </span><span>Ongoing</span>
     </li>
     <li> 
       <a class="btn btn-dark me-2"
          href="/Assignments/Index" role="button"> 
         <i class="bi bi-columns-gap"></i> 
       </a>
-      <span>Security Status: All systems operational</span>
+      <span class="briefing">Security Status: </span><span>All systems operational</span>
     </li>
   </ul>
   <p class="pt-2">Stand by for further instructions. The agency

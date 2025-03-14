@@ -3,24 +3,19 @@
 @{
     ViewData[ "Title" ] = "Create Operation";
 }
-
 <div class="form-con">
-
   <div class="form-header">Create Operation</div>
-
   <div class="form-body">
      @await Html.PartialAsync( "_Form", new Operations.FormModel 
      { 
          Operation = Model.Operation, 
          SubmitValue = "Create" 
-     });
+     })
   </div>
-
   <div class="form-footer">
     <a class="btn btn-dark"
-       href="/Operations/Index" role="button"> 
+       asp-page="/Operations/Index"> 
       Back
     </a>
   </div>
-
 </div>

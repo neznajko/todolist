@@ -1,10 +1,13 @@
 :root {
-    --main-bgr: hsl(220,32%,35%);
+    --main-bgr: hsl(280,2%,25%);
     --footer-border: hsl(20,80%,40%);
     
-    --velcome-fgr: hsl(224,34%,58%);
+    --velcome-fgr: hsl(210,20%,8%);
     --velcome-h1-fgr: hsl(224,94%,58%);
     --velcome-h1-bgr: hsl(210,20%,15%);
+    --velcome-hover: hsl(210,40%,18%);
+    --velcome-span: hsl(280,10%,50%);
+    --velcome-briefing: hsl(25,40%,40%);
 
     --about-h1: hsl(224,24%,60%);
     --about-p: hsl(224,24%,15%);
@@ -42,6 +45,6 @@
     --list-fgr-a: hsl( 5, 40%, 21% );
     --list-fgr-b: hsl( 180, 100%, 50% );
     --list-fgr-c: hsl( 340, 50%, 80% );
-    --list-bgr-a: hsl( 5, 20%, 18% );
+    --list-bgr-a: hsl( 5, 20%, 28% );
     --list-bgr-b: hsl( 200, 15%, 15% );
 }

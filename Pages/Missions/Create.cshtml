@@ -3,19 +3,15 @@
 @{
     ViewData["Title"] = "Create Misssion";
 }
-
 <div class="form-con">
-  
   <div class="form-header">Create Mission</div>
-
   <div class="form-body">
      @await Html.PartialAsync( "_Form", new Missions.FormModel
      {
          Mission = Model.Mission,
          SubmitValue = "Create"
-     });
+     })
   </div>
-
   <div class="form-footer">
     <a class="btn btn-dark" 
        asp-page="/Operations/Details"
@@ -23,7 +19,4 @@
       Back to Operation
     </a>
   </div>
-  
 </div>
-
-

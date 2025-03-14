@@ -18,17 +18,20 @@
     color: var( --velcome-h1-fgr );
     font-size: 1.5rem;
 }
-.velcome i:hover {
-    color: var( --velcome-fgr );
-}
 .velcome span {
     font-family: 'Alumni Sans', sans-serif;
     font-style: italic;
-    font-weight: 500;
-    color: var( --velcome-h1-bgr );
+    color: var( --velcome-span );
+}
+.velcome a:hover {
+    color: var( --velcome-fgr );
+    background: var( --velcome-hover );
 }
 .velcome li {
     padding-top: 0.5rem;
+}
+span.briefing {
+    color: var( --velcome-briefing );
 }
 @media( max-width: 576px ){
     .velcome {
