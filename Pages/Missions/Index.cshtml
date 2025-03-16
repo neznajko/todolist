@@ -1,10 +1,10 @@
 @page
 @model Missions.IndexModel
 @{
-    ViewData["Title"] = "Missions";
+    ViewData["Title"] = "M i s s i o n s";
 }
 <div class="list-con">
-    <div class="list-title">Missions</div>
+    <div class="list-title">@ViewData["Title"]</div>
     <div class="list">
         @foreach( var mission in Model.Missions ){
             <div class="list-item">

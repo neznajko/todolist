@@ -13,7 +13,7 @@
     --about-p: hsl(224,24%,15%);
     --about-a: hsl(224,34%,55%);
 
-    --btn-primary-bgr: hsl(220,50%,30%);
+    --btn-primary-bgr: hsl(229,60%,20%);
     --btn-primary-fgr: hsl(220,20%,60%);
     --btn-danger-bgr: hsl(0,50%,35%);
     --btn-danger-fgr: hsl(0,60%,10%);
@@ -42,9 +42,9 @@
     --form-control: hsl(0,20%,40%);
     --form-control-focus: hsl(0,12%,75%);
 
-    --list-fgr-a: hsl( 5, 40%, 21% );
-    --list-fgr-b: hsl( 180, 100%, 50% );
-    --list-fgr-c: hsl( 340, 50%, 80% );
-    --list-bgr-a: hsl( 5, 20%, 28% );
+    --list-fgr-a: hsl( 205, 100%, 24% );
+    --list-fgr-b: hsl( 198, 100%, 45% );
+    --list-fgr-c: hsl( 25, 80%, 50% );
+    --list-bgr-a: hsl( 5, 10%, 38% );
     --list-bgr-b: hsl( 200, 15%, 15% );
 }

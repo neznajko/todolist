@@ -8,11 +8,11 @@
     display: flex;
     flex-direction: column;
     font-family: serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 .list-title {
     font-family: 'Rubik Mono One';
-    font-size: 1.4rem;
+    font-size: 1.12rem;
     color: var( --list-fgr-a );
 }
 .list-title,
@@ -47,6 +47,16 @@
 .list-item p {
     color: var( --list-fgr-c );
     margin-right: var( --list-margin );
+}
+.list-footer .btn-primary:active {
+    background: hsl(229,60%,30%);
+    border: 1px solid hsl(205,50%,50%);
+    color: hsl( 5, 10%, 58% );
+}
+.list-footer .btn-dark:active {
+    background: hsl(200,18%,15%);
+    border: 1px solid hsl(20,10%,55%);
+    color: hsl( 5, 10%, 58% );
 }
 @media( max-width: 576px ){
     .list-con {

@@ -10,9 +10,28 @@
 /* ##########################################################
    #####[ btn ]##############################################
    ########################################################## */
+.btn {
+    color: hsl(5,10%,38%);
+}
+.btn:hover {
+    color: hsl( 5, 10%, 58% );
+}
 .btn-primary {
-    background: var( --btn-primary-bgr );
-    color: var( --btn-primary-fgr );
+    background: hsl(229,60%,23%);
+    border: 1px solid hsl(229,60%,23%);
+    color: hsl(5,10%,45%)
+}
+.btn-primary:hover {
+    background: hsl(229,60%,30%);
+    border: 1px solid hsl(205,50%,50%);
+}
+.btn-dark {
+    background: hsl(200,15%,15%);
+    border: 1px solid hsl(200,15%,15%);
+}
+.btn-dark:hover {
+    background: hsl(200,18%,15%);
+    border: 1px solid hsl(20,10%,55%);
 }
 .btn-danger {
     background: var( --btn-danger-bgr );
