@@ -53,11 +53,7 @@
     border: 1px solid hsl(205,50%,50%);
     color: hsl( 5, 10%, 58% );
 }
-.list-footer .btn-dark:active {
-    background: hsl(200,18%,15%);
-    border: 1px solid hsl(20,10%,55%);
-    color: hsl( 5, 10%, 58% );
-}
+
 @media( max-width: 576px ){
     .list-con {
         font-size: 0.9rem;

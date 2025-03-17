@@ -1,3 +1,13 @@
+:root {
+    --btn-color: hsl(5,50%,38%);
+    --btn-color-hover: hsl(5,50%,48%);
+
+    --btn-primary-bgr: hsl(229,60%,23%);
+    --btn-primary-fgr: hsl(5,10%,45%);
+    --btn-primary-bgr-hover: hsl(229,60%,30%);
+    --btn-primary-border-hover: hsl(205,50%,50%);
+    --btn-primary-fgr-hover: hsl(10,10%,55%);
+}
 /* ##########################################################
    #####[ nav ]##############################################
    ########################################################## */
@@ -11,20 +21,27 @@
    #####[ btn ]##############################################
    ########################################################## */
 .btn {
-    color: hsl(5,10%,38%);
+    color: var( --btn-color );
 }
 .btn:hover {
-    color: hsl( 5, 10%, 58% );
+    color: var( --btn-color-hover );
 }
+/* ##########################################################
+   #####[ btn-primary ]######################################
+   ########################################################## */
 .btn-primary {
-    background: hsl(229,60%,23%);
-    border: 1px solid hsl(229,60%,23%);
-    color: hsl(5,10%,45%)
+    background: var( --btn-primary-bgr );
+    border: 1px solid var( --btn-primary-bgr);
+    color: var( --btn-primary-fgr );
 }
 .btn-primary:hover {
-    background: hsl(229,60%,30%);
-    border: 1px solid hsl(205,50%,50%);
+    background: var( --btn-primary-bgr-hover);
+    border: 1px solid var( --btn-primary-border-hover );
+    color: var( --btn-primary-fgr-hover );
 }
+/* ##########################################################
+   #####[ btn-dark ]#########################################
+   ########################################################## */
 .btn-dark {
     background: hsl(200,15%,15%);
     border: 1px solid hsl(200,15%,15%);
@@ -33,10 +50,21 @@
     background: hsl(200,18%,15%);
     border: 1px solid hsl(20,10%,55%);
 }
+.list-footer .btn-dark:active {
+    background: hsl(200,18%,15%);
+    border: 1px solid hsl(20,10%,55%);
+    color: red;/*hsl( 5, 10%, 58% );*/
+}
+/* ##########################################################
+   #####[ btn-danger ]#######################################
+   ########################################################## */
 .btn-danger {
     background: var( --btn-danger-bgr );
     color: var( --btn-danger-fgr );
 }
+/* ##########################################################
+   #####[ btn-outline-light ]################################
+   ########################################################## */
 .btn-outline-light {
     color: var( --btn-outline-light );
     border: 1px solid var( --btn-outline-light );

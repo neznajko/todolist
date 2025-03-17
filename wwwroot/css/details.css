@@ -12,6 +12,14 @@
     width: 100%;
     font-family: monospace;
 }
+.card-body h1,
+.card-header h1 {
+    margin-left: var( --key-value-margin );
+}
+.card-footer {
+    padding-left: 0;
+    margin-left: var( --key-value-margin );
+}
 .details li {
     color: var( --details-li-fgr );
     background: var( --details-li-bgr );
