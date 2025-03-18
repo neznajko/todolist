@@ -48,12 +48,6 @@
     color: var( --list-fgr-c );
     margin-right: var( --list-margin );
 }
-.list-footer .btn-primary:active {
-    background: hsl(229,60%,30%);
-    border: 1px solid hsl(205,50%,50%);
-    color: hsl( 5, 10%, 58% );
-}
-
 @media( max-width: 576px ){
     .list-con {
         font-size: 0.9rem;

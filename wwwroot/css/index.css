@@ -26,12 +26,12 @@
 .velcome a:hover {
     color: var( --velcome-fgr );
     background: var( --velcome-hover );
-    border: 1px solid hsl(210,50%,34%);
+    border: 1px solid var( --velcome-hover-border );
 }
 .velcome .btn-dark:active {
     color: var( --velcome-fgr );
     background: var( --velcome-hover );
-    border: 1px solid hsl(210,50%,34%);
+    border: 1px solid var( --velcome-hover-border );
 }
 .velcome li {
     padding-top: 0.5rem;

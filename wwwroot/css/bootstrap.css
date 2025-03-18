@@ -7,6 +7,21 @@
     --btn-primary-bgr-hover: hsl(229,60%,30%);
     --btn-primary-border-hover: hsl(205,50%,50%);
     --btn-primary-fgr-hover: hsl(10,10%,55%);
+
+    --btn-dark-bgr: hsl(200,15%,15%);
+    --btn-dark-hover: hsl(200,18%,15%);
+    --btn-dark-hover-border: hsl(20,10%,50%);
+
+    --form-btn-primary-bgr: hsl(10,40%,20%);
+    --form-btn-primary-hover-bgr: hsl(15,85%,20%); 
+    --form-btn-primary-hover-fgr: hsl(10,50%,40%);
+    
+    --form-btn-dark-bgr: hsl(15,45%,8%);
+    --form-btn-dark-clr: hsl(20,50%,35%);    
+
+    --form-btn-dark-bgr-hover: hsl(10,50%,15%);
+    --form-btn-dark-clr-hover: hsl(210,50%,45%);
+    --form-btn-dark-bor-hover: hsl(10,40%,20%);
 }
 /* ##########################################################
    #####[ nav ]##############################################
@@ -34,26 +49,46 @@
     border: 1px solid var( --btn-primary-bgr);
     color: var( --btn-primary-fgr );
 }
+.list-footer .btn-primary:active, 
 .btn-primary:hover {
     background: var( --btn-primary-bgr-hover);
     border: 1px solid var( --btn-primary-border-hover );
     color: var( --btn-primary-fgr-hover );
 }
+.form-body .btn-primary {
+    background: var( --form-btn-primary-bgr );
+    border: 1px solid var( --form-btn-primary-bgr );
+}
+.form-body .btn-primary:hover {
+    background: var( --form-btn-primary-hover-bgr );
+    border: 1px solid var( --form-btn-primary-hover-bgr );
+    color: var( --form-btn-primary-hover-fgr );
+}
 /* ##########################################################
    #####[ btn-dark ]#########################################
    ########################################################## */
 .btn-dark {
-    background: hsl(200,15%,15%);
-    border: 1px solid hsl(200,15%,15%);
+    background: var( --btn-dark-bgr );
+    border: 1px solid var( --btn-dark-bgr );
 }
 .btn-dark:hover {
-    background: hsl(200,18%,15%);
-    border: 1px solid hsl(20,10%,55%);
+    background: var( --btn-dark-hover );
+    border: 1px solid var( --btn-dark-hover-border );
 }
 .list-footer .btn-dark:active {
-    background: hsl(200,18%,15%);
-    border: 1px solid hsl(20,10%,55%);
-    color: red;/*hsl( 5, 10%, 58% );*/
+    background: var( --btn-dark-hover );
+    border: 1px solid var( --btn-dark-hover-border );
+    color: var( --btn-color-hover );
+}
+.form-footer .btn-dark {
+    background: var( --form-btn-dark-bgr );
+    color: var( --form-btn-dark-clr );
+    border: 1px solid var( --form-btn-dark-bgr );
+}
+.form-footer .btn-dark:hover {
+    background: var( --form-btn-dark-bgr-hover );
+    color: var( --form-btn-dark-clr-hover );
+    border: 1px solid var( --form-btn-dark-bor-hover );
 }
 /* ##########################################################
    #####[ btn-danger ]#######################################

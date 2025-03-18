@@ -54,25 +54,6 @@
 /* ##########################################################
    ##########################################################
    ########################################################## */
-.form-body .btn-primary {
-    background: hsl(10,40%,20%);
-    border: 1px solid hsl(10,40%,20%);
-}
-.form-body .btn-primary:hover {
-    background: hsl(15,45%,8%);
-    border: 1px solid hsl(15,45%,8%);
-    color: hsl(10,50%,40%);
-}
-.form-footer .btn-dark {
-    background: hsl(15,45%,8%);
-    color: hsl(20,50%,35%);
-    border: 1px solid hsl(15,45%,8%);
-}
-.form-footer .btn-dark:hover {
-    background: hsl(10,50%,15%);
-    color: hsl(210,50%,45%);
-    border: 1px solid hsl(10,40%,20%);
-}
 @media( max-width: 576px ){
     .form-con {
         width: 100%;
