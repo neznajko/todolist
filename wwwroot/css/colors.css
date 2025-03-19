@@ -12,14 +12,7 @@
 
     --about-h1: hsl(224,24%,60%);
     --about-p: hsl(224,24%,15%);
-    --about-a: hsl(224,34%,55%);
-
-    --btn-primary-bgr: hsl(229,60%,20%);
-    --btn-primary-fgr: hsl(220,20%,60%);
-    --btn-danger-bgr: hsl(0,50%,35%);
-    --btn-danger-fgr: hsl(0,60%,10%);
-    --btn-outline-light: hsl(10,20%,70%);
-    --btn-outline-light-hover: hsl(10,20%,50%);
+    --about-a: hsl(224,24%,60%);
 
     --details-bgr: hsl(30,20%,10%);
     --details-fgr: hsl(15,20%,40%);

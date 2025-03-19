@@ -1,11 +1,11 @@
 .about {
     width: 75%;
-    font-size: 1.15rem;
+    font-size: 2rem;
+    font-family: 'Alex Brush', cursive;
 }
 .about h1 {
     color: var( --about-h1 );
     margin-bottom: 0.4rem;
-    font-family: 'Alex Brush', cursive;
 }
 .about p {
     color: var( --about-p );
@@ -14,7 +14,6 @@
 }
 .about a {
     color: var( --about-a );
-    font-style: italic;
 }
 .about a:hover {
     opacity: 0.5;

@@ -22,7 +22,7 @@
 ################################################################
 --------------------------------------------------------------->
 <div class="card details">
-   <div class="card-header">
+   <div class="card-header key">
       <h1 class="display-5">Assignment Details</h1>
    </div>
    <ul class="list-group list-group-flush">
@@ -55,11 +55,11 @@
          </span>
       </li>
    </ul>
-   <div class="card-footer">
+   <div class="card-footer key">
       <a class="btn btn-primary" 
          asp-page="/Assignments/Edit" 
          asp-route-id="@Model.Assignment.Id"> Edit </a>
-      <a class="btn btn-danger ms-2"
+      <a class="btn btn-danger ms-1"
          asp-page="/Assignments/Delete" 
          asp-route-id="@Model.Assignment.Id"> Delete </a>  
       <a class="btn btn-outline-primary ms-1"

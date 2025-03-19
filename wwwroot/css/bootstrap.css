@@ -22,6 +22,28 @@
     --form-btn-dark-bgr-hover: hsl(10,50%,15%);
     --form-btn-dark-clr-hover: hsl(210,50%,45%);
     --form-btn-dark-bor-hover: hsl(10,40%,20%);
+
+    --card-footer-btn-primary-bgr: hsl( 15, 80%, 20% );
+    --card-footer-btn-primary-hov: hsl( 15, 90%, 24% );
+    --card-footer-btn-primary-clr: hsl( 20, 50%, 50% );
+
+    --btn-danger-bgr: hsl(0,50%,29%);
+    --btn-danger-fgr: hsl(0,60%,10%);
+    --btn-danger-fgr-hover: hsl(0,29%,70%);
+
+    --btn-outline-light: hsl(10,20%,70%);
+    --btn-outline-light-bgr-hover: hsl(15,75%,15%);
+    --btn-outline-light-clr-hover: hsl(15,75%,50%);
+
+    --btn-outline-primary-clr-hov: hsl(15,50%,75%);
+
+    --btn-nope-bgr: hsl(212, 71%, 47%);
+    --btn-nope-bor: hsl(215,65%,55%);
+    --btn-nope-clr: hsl(215,52%,68%);
+
+    --btn-nope-bgr-hov: hsl(212, 80%, 54%);
+    --btn-nope-bor-hov: hsl(215,65%,65%);
+    --btn-nope-clr-hov: hsl(215,92%,80%);
 }
 /* ##########################################################
    #####[ nav ]##############################################
@@ -64,6 +86,28 @@
     border: 1px solid var( --form-btn-primary-hover-bgr );
     color: var( --form-btn-primary-hover-fgr );
 }
+.card-footer .btn-primary {
+    background: var( --card-footer-btn-primary-bgr );
+    border: 1px solid var( --card-footer-btn-primary-bgr );
+}
+.card-footer .btn-primary:hover,
+.card-footer .btn-primary:active {
+    background: var( --card-footer-btn-primary-hov );
+    color: var( --card-footer-btn-primary-clr );
+}
+.card-body .btn-primary
+{
+    background: var( --btn-nope-bgr );
+    border: 1px solid var( --btn-nope-bor );
+    color: var( --btn-nope-clr );
+}
+.card-body .btn-primary:active,
+.card-body .btn-primary:hover 
+{
+    background: var( --btn-nope-bgr-hov );
+    border: 1px solid var( --btn-nope-bor-hov );
+    color: var( --btn-nope-clr-hov );
+}
 /* ##########################################################
    #####[ btn-dark ]#########################################
    ########################################################## */
@@ -97,6 +141,11 @@
     background: var( --btn-danger-bgr );
     color: var( --btn-danger-fgr );
 }
+.btn-danger:active,
+.btn-danger:hover
+{
+    color: var( --btn-danger-fgr-hover ) !important;
+}
 /* ##########################################################
    #####[ btn-outline-light ]################################
    ########################################################## */
@@ -104,8 +153,18 @@
     color: var( --btn-outline-light );
     border: 1px solid var( --btn-outline-light );
 }
-.btn-outline-light:hover {
-    background: var( --btn-outline-light-hover );
+.card-footer .btn-outline-light:hover {
+    background: var( --btn-outline-light-bgr-hover );
+    color: var( --btn-outline-light-clr-hover );
+    border: 1px solid var( --btn-outline-light-clr-hover );
+}
+/* ##########################################################
+   #####[ btn-outline-primary ]##############################
+   ########################################################## */
+.card-footer .btn-outline-primary:active,
+.card-footer .btn-outline-primary:hover 
+{
+    color: var( --btn-outline-primary-clr-hov );
 }
 /* ##########################################################
    #####[ card ]#############################################
@@ -116,6 +175,20 @@
 .card-header {
     font-family: 'Alex Brush', cursive;
     margin-top: 1rem;
+    padding: 0;
+}
+.card-body {
+    padding-left: 0;
+}
+/* ##########################################################
+   ##########################################################
+   ########################################################## */
+@media( max-width: 576px ){
+    .card-header,
+    .card-body
+    {
+        padding-left: 1rem;
+    }
 }
 /* ##########################################################
    ##########################################################
