@@ -37,8 +37,8 @@
 .value a:hover {
     color: var( --value-a-hover );
 }
-.delete .card-header {
-    border-bottom: 1px solid var( --delete-border );
+.delete .card-body {
+    border-top: 1px solid var( --delete-border );
 }
 .assignments-list {
     font-size: 0.8rem;
