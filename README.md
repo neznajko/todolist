@@ -57,7 +57,7 @@ Asssignment
 }
 > Mission: Mission
 ```
-It looks something like this:
+The whole stuff looks something like this:
 ```c#
 ########################################################################################################
 Operation: "Task Force Alpha"                                                                { Engaged }
