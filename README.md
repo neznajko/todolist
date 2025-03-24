@@ -96,6 +96,7 @@ to start and stop the container, type from the ***todolist*** directory:
 docker compose up -d # start in detached mode( background )
 docker compose down  # stop the container
 ```
+And don't forget to visit localhost:8080
 ## Usage
 
 ![Welcome](pix/01-todolist-welcome.png)
